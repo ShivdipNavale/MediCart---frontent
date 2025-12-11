@@ -2,17 +2,15 @@ import React from 'react'
 import Auth from '../components/Auth'
 
 const Login = () => {
-    const handleLoginSubmit = (e) => {
+    const handleLoginSubmit = (e, payload) => {
         e.preventDefault();
-        alert("Login form submitted!");
+        console.log(JSON.stringify(payload));
     }
 
     return (
-        <>
-            <div className="container">
-                <Auth type="Login" onSubmit={handleLoginSubmit} />
-            </div>
-        </>
+        <div className="container">
+            <Auth type="Login" onSubmit={handleLoginSubmit} />
+        </div>
     )
 }
 

@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
-export const NavBar = () => {
+const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -17,13 +17,6 @@ export const NavBar = () => {
                     <span className="navbar-toggler-icon" />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/">
-                                Home
-                            </Link>
-                        </li>
-                    </ul>
                     <div className="ms-auto d-flex gap-2">
                         <Link to="/login" className="btn btn-sm btn-success"> Login </Link>
                         <Link to="/register" className="btn btn-sm btn-success"> Register </Link>
@@ -33,3 +26,14 @@ export const NavBar = () => {
         </nav>
     )
 }
+
+const Client = () => {
+    return (
+        <>
+            <Navbar />
+            <Outlet />
+        </>
+    )
+}
+
+export default Client

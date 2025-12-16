@@ -8,7 +8,7 @@ const Login = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container my-auto">
             <Auth type="Login" onSubmit={handleLoginSubmit} />
         </div>
     )

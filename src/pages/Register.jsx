@@ -8,7 +8,7 @@ const Register = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container my-auto">
             <Auth type="Register" onSubmit={handleRegisterSubmit} />
         </div>
     )
